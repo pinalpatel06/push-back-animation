@@ -1,1 +1,92 @@
+
+@import "http://compass-style.org/reference/compass/css3/";
 /* You can add global styles to this file, and also import other style files */
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  .card-container {
+    margin-top: 16px;
+    padding: 30px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .master {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      transition: left 2s ease-in-out;
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+      background-color: cornflowerblue;
+
+      &.active {
+          left: -70%;
+      }
+
+      &.sub-child {
+          left: -200%;
+      }
+  }
+
+  .child {
+    position: absolute;
+    top: 0;
+    right: -110%;
+    transition: right 2s ease-in-out;
+    width: 80%;
+    height: 400px;
+    margin-top: 20px;
+    background-color: rgb(113, 132, 167);
+    
+    &.active {
+        right: 0%;
+    }
+
+    &.sub-child {
+        right: 70%;
+    }
+  }
+
+  .sub-child1 {
+    position: absolute;
+    top: 0;
+    right: -110%;
+    transition: right 1s ease-in-out;
+    width: 80%;
+    height: 400px;
+    margin-top: 20px;
+    background-color: rgb(139, 140, 143);
+
+    &.active {
+        right: 0%;
+    }
+  }
+
+  .knx-close {
+    position: absolute !important;
+    top: -32px;
+    right: -10px;
+  }
+
+  a {
+      cursor: pointer;
+  }
